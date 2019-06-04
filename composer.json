@@ -1,0 +1,22 @@
+{
+    "name": "disjfa/editorjs-bundle",
+    "description": "Add some editorjs to your admin",
+    "keywords": [
+        "editor", "javascript", "editorjs"
+    ],
+    "type": "symfony-bundle",
+    "require": {
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "disjfa",
+            "email": "disjfa@disjfa.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Disjfa\\EditorjsBundle\\": ""
+        }
+    }
+}
