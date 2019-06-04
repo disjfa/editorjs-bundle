@@ -1,9 +1,17 @@
 services:
     _defaults:
         autowire: true
-        autoconfigure: false
+        autoconfigure: true
         public: false
 
     Disjfa\EditorjsBundle\:
         resource: './../../*'
         exclude: './../../{Entity,Migrations,Tests}'
+
+    Disjfa\EditorjsBundle\Form\DataTransformer\EditorjsTransformer:
+        arguments:
+            $tools: '%disjfa_editorjs.tools%'
+
+    Disjfa\EditorjsBundle\Twig\EditorjsExtension:
+        arguments:
+            $tools: '%disjfa_editorjs.tools%'

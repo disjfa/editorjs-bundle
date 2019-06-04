@@ -17,9 +17,13 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('disjfa_event');
-
+        $treeBuilder = new TreeBuilder('disjfa_editorjs');
+        $treeBuilder->getRootNode()
+            ->children()
+            ->arrayNode('tools')
+            ->ignoreExtraKeys(false)
+            ->end()
+            ->end();
         return $treeBuilder;
     }
 }
